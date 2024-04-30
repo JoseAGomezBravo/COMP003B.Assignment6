@@ -1,20 +1,19 @@
 ﻿namespace COMP003B.Assignment6.Services
 {
-    public class MyTransientService
+    public class MyScopedService
     {
-
-        //private field
+        // private field
         private readonly Guid _uniqueId;
 
-        // default constructor
-        public MyTransientService()
+        // defualt constructor
+        public MyScopedService() 
         {
-            _uniqueId = Guid.NewGuid ();
+            _uniqueId= Guid.NewGuid();
         }
 
-        // public method that returns the _unique value
-        public Guid GetUniqueId()
-        {
+        //public method that returns the _uniqueId value
+        public Guid GetUniqueId() 
+        { 
             return _uniqueId;
         }
     }
